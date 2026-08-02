@@ -11,6 +11,7 @@ Organization profile and community files for [DataKnifeAI](https://github.com/Da
 | [`docs/PROJECT_SETUP.md`](docs/PROJECT_SETUP.md) | For new/existing projects: review [agent-skills](https://github.com/DataKnifeAI/agent-skills) and [agent-workspace](https://github.com/DataKnifeAI/agent-workspace) |
 | [`docs/REPO_SETTINGS.md`](docs/REPO_SETTINGS.md) | Recommended repo settings, branch protection, and security defaults |
 | [`gitlab-profile/`](gitlab-profile/) | GitLab group README + GitLab-only docs (mirrored to GitLab) |
+| [`docs/GITLAB_MIRROR.md`](docs/GITLAB_MIRROR.md) | Mirror workflow, path mapping, and required secrets |
 
 The profile README displays the **1024×1024** logo only. Smaller PNGs are retained for GitHub/GitLab avatar upload—see the branding doc.
 
