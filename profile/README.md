@@ -21,6 +21,15 @@ The name nods lightly to a tool for getting into systems—applied here to AI de
 | **GitOps + infra** | Repeatable cluster and platform delivery that agents (and humans) can trust |
 | **Local + API models** | Run where it fits—self-hosted inference when you want agency, cloud APIs when you want reach |
 
+## For new and existing projects
+
+Before inventing project-local Cursor skills or Cloud Agent layouts, review the shared baselines:
+
+- **[agent-skills](https://github.com/DataKnifeAI/agent-skills)** — shared Cursor skills for the org
+- **[agent-workspace](https://github.com/DataKnifeAI/agent-workspace)** — Cloud Agent / Coder workspace baseline (vendors `agent-skills`)
+
+Short checklist: [PROJECT_SETUP.md](https://github.com/DataKnifeAI/.github/blob/main/docs/PROJECT_SETUP.md).
+
 ## Featured projects
 
 ### Agent pipeline & control plane

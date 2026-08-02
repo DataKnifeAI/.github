@@ -4,6 +4,8 @@ Canonical **organization** identity for DataKnifeAI (GitHub org / GitLab group).
 
 Repository naming (pipeline layers, descriptive vs evocative, upstream integrations): [NAMING.md](./NAMING.md).
 
+Shared agent baselines for projects: [PROJECT_SETUP.md](./PROJECT_SETUP.md) ([agent-skills](https://github.com/DataKnifeAI/agent-skills), [agent-workspace](https://github.com/DataKnifeAI/agent-workspace)).
+
 ## Mission
 
 Learn and solve problems by leveraging AI tools so the work stays maintainable and runs reliably through automation—preferring open software that respects freedom.
