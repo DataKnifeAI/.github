@@ -36,4 +36,6 @@ gh secret set GITLAB_TOKEN -R DataKnifeAI/.github
 
 ## GitLab project settings for the mirror
 
-The push action **force-pushes** `main`. Match other mirrors (e.g. `devops/rancher-deploy`): protect `main`, but allow Maintainers to force-push so the Actions token can update the group README project. Keep approvals at **0** (solo-dev). Do not require a pipeline on this meta project unless CI is intentionally added on GitLab.
+The push action **force-pushes** `main`. Match other mirrors (e.g. `devops/rancher-deploy`): protect `main`, **Allowed to push/merge = Maintainers**, **allow force push = on**, approvals **0** (solo-dev). Do not require a pipeline on this meta project unless CI is intentionally added on GitLab.
+
+Full group policy (normal MR path + CI/Mirror exception + token guidance): [`gitlab-profile/docs/PROJECT_SETTINGS.md`](../gitlab-profile/docs/PROJECT_SETTINGS.md).

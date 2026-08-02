@@ -24,7 +24,7 @@ This GitLab group (`dk-raas/dkai`) is the **mirror / secondary** home for DataKn
 |-----|---------|
 | [`docs/ORG_BRANDING.md`](docs/ORG_BRANDING.md) | Mission, profile copy, avatar guidance |
 | [`docs/NAMING.md`](docs/NAMING.md) | Project naming (same policy as GitHub) |
-| [`docs/PROJECT_SETTINGS.md`](docs/PROJECT_SETTINGS.md) | GitLab protected branches / MR defaults (solo-dev) |
+| [`docs/PROJECT_SETTINGS.md`](docs/PROJECT_SETTINGS.md) | GitLab solo-dev settings + GitHub→GitLab CI/mirror push exception |
 | [`docs/PROJECT_SETUP.md`](docs/PROJECT_SETUP.md) | Pointers to shared agent baselines (GitHub-canonical) |
 
 ## Featured projects (GitLab mirrors)
