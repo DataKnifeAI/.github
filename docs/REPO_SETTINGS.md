@@ -6,7 +6,7 @@ Aligned with the org mission: keep work **maintainable**, **automated**, and **s
 
 Branch protection defaults assume a **solo maintainer** — safe and automatable, not multi-reviewer gates. Adjust when the org grows ([details](#default-branch-protection--rulesets)).
 
-Related: agent skills / Cloud Agent workspace baseline — [`PROJECT_SETUP.md`](https://github.com/DataKnifeAI/.github/pull/5) (PR; path `docs/PROJECT_SETUP.md` after merge).
+Related: [`PROJECT_SETUP.md`](PROJECT_SETUP.md) (agent skills / Cloud Agent workspace baseline), [`NAMING.md`](NAMING.md), [`ORG_BRANDING.md`](ORG_BRANDING.md).
 
 This document describes the **target** state. Existing repos may drift; prefer fixing settings intentionally (new repos first, then high-traffic product repos) rather than bulk-changing everything at once.
 
