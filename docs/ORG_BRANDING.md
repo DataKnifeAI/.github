@@ -2,6 +2,8 @@
 
 Canonical **organization** identity for DataKnifeAI (GitHub org / GitLab group). This repo (`.github`) holds the public org profile README and branding assets. Individual product repos should not redefine org branding.
 
+Repository naming (pipeline layers, descriptive vs evocative, upstream integrations): [NAMING.md](./NAMING.md).
+
 ## Mission
 
 Learn and solve problems by leveraging AI tools so the work stays maintainable and runs reliably through automation—preferring open software that respects freedom.
