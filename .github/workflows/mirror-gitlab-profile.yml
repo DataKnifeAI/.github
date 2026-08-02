@@ -1,0 +1,69 @@
+# Map DataKnifeAI/.github → dk-raas/dkai/gitlab-profile (GitLab group README project).
+# Reuses DataKnifeAI/github-workflows push-gitlab-mirror action after path remapping.
+name: Mirror to GitLab profile
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  push-to-gitlab:
+    name: Push to GitLab
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Require GITLAB_TOKEN
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          if [ -z "${GITLAB_TOKEN:-}" ]; then
+            echo "::error::GITLAB_TOKEN is not set on DataKnifeAI/.github (repo or org secret). Add a GitLab PAT with write_repository on dk-raas/dkai/gitlab-profile."
+            exit 1
+          fi
+
+      - name: Map content for GitLab group profile
+        run: |
+          set -euo pipefail
+          STAGE="$(mktemp -d)"
+          mkdir -p "${STAGE}/docs" "${STAGE}/assets"
+
+          # GitLab group README (not the GitHub org profile README)
+          cp gitlab-profile/README.md "${STAGE}/README.md"
+          cp gitlab-profile/MANUAL_SETUP.md "${STAGE}/MANUAL_SETUP.md"
+
+          # Shared org docs from GitHub canonical tree
+          cp docs/*.md "${STAGE}/docs/"
+
+          # GitLab-only docs (e.g. PROJECT_SETTINGS) overlay last
+          if [ -d gitlab-profile/docs ]; then
+            cp gitlab-profile/docs/*.md "${STAGE}/docs/"
+          fi
+
+          # Org logo assets (GitHub profile/assets → GitLab assets/)
+          cp profile/assets/* "${STAGE}/assets/"
+
+          # Replace working tree with mapped layout; keep .git for the push action
+          git rm -rf --quiet . >/dev/null 2>&1 || true
+          # Restore nothing from index; copy staged tree
+          cp -a "${STAGE}/." .
+          git add -A
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git commit -m "mirror: sync GitLab group profile from DataKnifeAI/.github" --allow-empty
+
+      - name: Push to GitLab
+        uses: DataKnifeAI/github-workflows/.github/actions/push-gitlab-mirror@main
+        with:
+          gitlab_mirror_path: dk-raas/dkai/gitlab-profile
+          remote_branch: main
+          gitlab_base_url: https://gitlab.com
+          gitlab_token: ${{ secrets.GITLAB_TOKEN }}
