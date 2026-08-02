@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://gitlab.com/dk-raas/dkai/gitlab-profile/-/raw/main/assets/dataknifeai-org-logo.png" alt="DataKnifeAI" width="320" height="320" />
+</p>
+
 # DataKnifeAI
 
 **Learn and solve problems with AI tools—built to stay maintainable through automation, and aligned with software freedom.**
