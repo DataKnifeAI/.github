@@ -4,6 +4,8 @@ Recommended **common pattern** for first-party (non-fork) repositories in the [D
 
 Aligned with the org mission: keep work **maintainable**, **automated**, and **stable**, and prefer setups that stay operable without one-off heroics. See [`ORG_BRANDING.md`](ORG_BRANDING.md) for identity and principles.
 
+Related: agent skills / Cloud Agent workspace baseline — [`PROJECT_SETUP.md`](https://github.com/DataKnifeAI/.github/pull/5) (PR; path `docs/PROJECT_SETUP.md` after merge).
+
 This document describes the **target** state. Existing repos may drift; prefer fixing settings intentionally (new repos first, then high-traffic product repos) rather than bulk-changing everything at once.
 
 ## Scope
