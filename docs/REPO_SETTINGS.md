@@ -124,8 +124,8 @@ Observed across org-owned non-fork repos (representative audit; not a live dashb
 
 | Area | Drift |
 |------|--------|
-| Wiki | Off on some older product repos; still on for many others and `.github` |
-| Delete branch on merge | On for an older core set; **off** on many newer repos |
+| Wiki | Off on some older product repos; still on for many others (prefer off) |
+| Delete branch on merge | On for an older core set (and `.github`); **off** on many newer repos |
 | Auto-merge | Enabled only on an outlier (`high-command-mcp`) |
 | Branch protection | **Missing** on several newer public repos (operators / related) and on `.github` |
 | Required reviews | Often **0** approvals (PR still required); scripted intent elsewhere was 1 |
