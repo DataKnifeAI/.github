@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DataKnifeAI/.github/main/profile/assets/dataknifeai-org-logo.png" alt="DataKnifeAI" width="160" height="160" />
+  <img src="https://raw.githubusercontent.com/DataKnifeAI/.github/main/profile/assets/dataknifeai-org-logo.png" alt="DataKnifeAI" width="240" height="240" />
 </p>
 
 # DataKnifeAI
