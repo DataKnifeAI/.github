@@ -51,9 +51,15 @@ jobs:
           # Org logo assets (GitHub profile/assets → GitLab assets/)
           cp profile/assets/* "${STAGE}/assets/"
 
-          # Replace working tree with mapped layout; keep .git for the push action
-          git rm -rf --quiet . >/dev/null 2>&1 || true
-          # Restore nothing from index; copy staged tree
+          # Rewrite GitHub-only relative links so mirrored docs resolve on GitLab
+          find "${STAGE}/docs" -type f -name '*.md' -print0 | xargs -0 sed -i \
+            -e 's|](../profile/assets/|](../assets/|g' \
+            -e 's|](../.github/workflows/mirror-gitlab-profile.yml)|](https://github.com/DataKnifeAI/.github/blob/main/.github/workflows/mirror-gitlab-profile.yml)|g' \
+            -e 's|](../gitlab-profile/docs/|](|g'
+
+          # Replace working tree with mapped layout; keep .git for the push action.
+          # Fail hard on wipe errors so GitHub-only paths cannot leak into the mirror commit.
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           cp -a "${STAGE}/." .
           git add -A
           git config user.name "GitHub Actions"
