@@ -6,7 +6,9 @@ Aligned with the org mission: keep work **maintainable**, **automated**, and **s
 
 Branch protection defaults assume a **solo maintainer** — safe and automatable, not multi-reviewer gates. Adjust when the org grows ([details](#default-branch-protection--rulesets)).
 
-Related: [`PROJECT_SETUP.md`](PROJECT_SETUP.md) (agent skills / Cloud Agent workspace baseline), [`NAMING.md`](NAMING.md), [`ORG_BRANDING.md`](ORG_BRANDING.md).
+Related: [`PROJECT_SETUP.md`](PROJECT_SETUP.md) (agent skills / Cloud Agent workspace baseline), [`NAMING.md`](NAMING.md), [`ORG_BRANDING.md`](ORG_BRANDING.md), [`GITLAB_MIRROR.md`](GITLAB_MIRROR.md).
+
+**GitLab mirrors:** first-party repos under [`dk-raas/dkai`](https://gitlab.com/groups/dk-raas/dkai) follow the same solo-dev intent, with an explicit **CI/Mirror exception** so GitHub Actions can force-push with `GITLAB_TOKEN`. See GitLab [`PROJECT_SETTINGS.md`](https://gitlab.com/dk-raas/dkai/gitlab-profile/-/blob/main/docs/PROJECT_SETTINGS.md) (source overlay: [`gitlab-profile/docs/PROJECT_SETTINGS.md`](../gitlab-profile/docs/PROJECT_SETTINGS.md)).
 
 This document describes the **target** state. Existing repos may drift; prefer fixing settings intentionally (new repos first, then high-traffic product repos) rather than bulk-changing everything at once.
 
@@ -125,6 +127,7 @@ Reusable CI lives in [`DataKnifeAI/github-workflows`](https://github.com/DataKni
 - Caller repos should **pin a tag** (for example `@v1`), not floating `@main`, once a release line is stable.
 - After a consumer wires reusable workflows, add those job/check names to **required status checks** on `main` so automation actually gates merges.
 - Mirror / security reusable workflows (GitLab push, Trivy, game-server verify) are opt-in per repo; protection should only require checks that the repo runs.
+- GitLab side: mirrored projects must allow Maintainer push **and** force-push on `main` so `push-gitlab-mirror` succeeds—documented under GitLab [PROJECT_SETTINGS — CI/Mirror exception](https://gitlab.com/dk-raas/dkai/gitlab-profile/-/blob/main/docs/PROJECT_SETTINGS.md#cimirror-exception-github--gitlab-direct-push). That is intentionally looser than “no force push” on GitHub `main`.
 
 Settings keep the branch **stable**; reusable workflows keep verification **automated** and consistent across consumers.
 

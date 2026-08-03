@@ -100,3 +100,11 @@ GitHub renders an org landing README from this public repo: edit **`profile/READ
 2. Update `profile/README.md` (mission/tagline should stay aligned with the Profile copy above)
 3. Keep the header image pointed at `profile/assets/dataknifeai-org-logo.png` (1024×1024 only—do not switch the README to the 384 asset)
 4. Open a PR into `main` — after merge, https://github.com/DataKnifeAI shows the new profile
+
+### Group profile README (GitLab)
+
+GitLab renders the group overview README from **`gitlab-profile/README.md`** (mirrored to project `dk-raas/dkai/gitlab-profile`). Group overview image paths can fail with relative links—use an absolute raw URL to the 1024 asset:
+
+`https://gitlab.com/dk-raas/dkai/gitlab-profile/-/raw/main/assets/dataknifeai-org-logo.png`
+
+Keep that header pointed at the 1024 file only (not the 384 avatar asset). Assets sync from `profile/assets/` → GitLab `assets/` via the mirror workflow.
