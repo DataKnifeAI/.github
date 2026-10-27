@@ -51,8 +51,14 @@ All files live under [`profile/assets/`](../profile/assets/).
 | [`dataknifeai-org-logo.png`](../profile/assets/dataknifeai-org-logo.png) | 1024×1024 (~1.2 MB) | Full-resolution source; **profile README header** |
 | [`dataknifeai-org-logo-384.png`](../profile/assets/dataknifeai-org-logo-384.png) | 384×384 (~146 KB) | **Recommended** GitHub/GitLab org avatar upload (under 200 KB) |
 | [`dataknifeai-org-logo-512.png`](../profile/assets/dataknifeai-org-logo-512.png) | 512×512 (~264 KB) | Larger scaled master (over 200 KB for some upload limits) |
+| [`dataknifeai-favicon-mark-384.png`](../profile/assets/dataknifeai-favicon-mark-384.png) | 384×384 | Hex mark only (no wordmark); favicon / compact icon source |
+| [`dataknifeai-favicon-mark-512.png`](../profile/assets/dataknifeai-favicon-mark-512.png) | 512×512 | Larger hex-mark master |
+| [`favicon.svg`](../profile/assets/favicon.svg) | SVG | Preferred browser tab icon (embedded hex mark) |
+| [`favicon-32.png`](../profile/assets/favicon-32.png) | 32×32 | PNG favicon fallback |
+| [`favicon-64.png`](../profile/assets/favicon-64.png) | 64×64 | Larger PNG favicon |
+| [`apple-touch-icon.png`](../profile/assets/apple-touch-icon.png) | 180×180 | Apple touch icon |
 
-The org profile README displays **only** the 1024×1024 asset. Keep the 384 (and 512) files in-repo for avatar uploads and other scaled uses—do not embed them in `profile/README.md`.
+The org profile README displays **only** the 1024×1024 asset. Keep the 384 (and 512) full-logo files in-repo for avatar uploads and other scaled uses—do not embed them in `profile/README.md`. Use the **favicon mark** (hex emblem cropped, no wordmark) for site tabs and anywhere a small icon must stay legible; it is not a replacement for the org avatar (prefer the full 384 logo for avatar upload).
 
 ## Set the live profiles
 
