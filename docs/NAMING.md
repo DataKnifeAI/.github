@@ -2,7 +2,7 @@
 
 How we name new projects so the org stays discoverable, mission-aligned, and not coupled to any single upstream product.
 
-Related: [ORG_BRANDING.md](./ORG_BRANDING.md) (mission, tagline, principles).
+Related: [ORG_BRANDING.md](./ORG_BRANDING.md) (mission, tagline, principles), [REPO_PRESENTATION.md](./REPO_PRESENTATION.md) (description / topics / README hero checklist).
 
 ## Goals
 

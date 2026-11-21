@@ -8,7 +8,8 @@ Organization profile and community files for [DataKnifeAI](https://github.com/Da
 | [`profile/assets/`](profile/assets/) | Org logo assets (1024 header + 384/512 upload sizes) |
 | [`docs/ORG_BRANDING.md`](docs/ORG_BRANDING.md) | Canonical mission, profile copy, and avatar guidance |
 | [`docs/NAMING.md`](docs/NAMING.md) | Repository naming for the agent pipeline (descriptive vs evocative; upstream integrations) |
-| [`docs/PROJECT_SETUP.md`](docs/PROJECT_SETUP.md) | For new/existing projects: review [agent-skills](https://github.com/DataKnifeAI/agent-skills) and [agent-workspace](https://github.com/DataKnifeAI/agent-workspace) |
+| [`docs/PROJECT_SETUP.md`](docs/PROJECT_SETUP.md) | For new/existing projects: vendor Cursor rules from [agent-skills](https://github.com/DataKnifeAI/agent-skills); review skills and [agent-workspace](https://github.com/DataKnifeAI/agent-workspace) |
+| [`docs/REPO_PRESENTATION.md`](docs/REPO_PRESENTATION.md) | Product-repo checklist: GitHub description, topics, README lead, hero asset |
 | [`docs/REPO_SETTINGS.md`](docs/REPO_SETTINGS.md) | Recommended repo settings, branch protection, and security defaults |
 | [`docs/GITLAB_MIRROR.md`](docs/GITLAB_MIRROR.md) | GitHub → GitLab group-profile mirror (paths + secrets) |
 | [`gitlab-profile/`](gitlab-profile/) | GitLab group README + GitLab-only docs (mirrored to GitLab) |
