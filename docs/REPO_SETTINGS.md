@@ -6,7 +6,7 @@ Aligned with the org mission: keep work **maintainable**, **automated**, and **s
 
 Branch protection defaults assume a **solo maintainer** — safe and automatable, not multi-reviewer gates. Adjust when the org grows ([details](#default-branch-protection--rulesets)).
 
-Related: [`PROJECT_SETUP.md`](PROJECT_SETUP.md) (agent skills / Cloud Agent workspace baseline), [`NAMING.md`](NAMING.md), [`ORG_BRANDING.md`](ORG_BRANDING.md), [`GITLAB_MIRROR.md`](GITLAB_MIRROR.md).
+Related: [`PROJECT_SETUP.md`](PROJECT_SETUP.md) (agent skills / Cursor rules / Cloud Agent workspace), [`REPO_PRESENTATION.md`](REPO_PRESENTATION.md) (description, topics, README hero), [`NAMING.md`](NAMING.md), [`ORG_BRANDING.md`](ORG_BRANDING.md), [`GITLAB_MIRROR.md`](GITLAB_MIRROR.md).
 
 **GitLab mirrors:** first-party repos under [`dk-raas/dkai`](https://gitlab.com/groups/dk-raas/dkai) follow the same solo-dev intent, with an explicit **CI/Mirror exception** so GitHub Actions can force-push with `GITLAB_TOKEN`. See GitLab [`PROJECT_SETTINGS.md`](https://gitlab.com/dk-raas/dkai/gitlab-profile/-/blob/main/docs/PROJECT_SETTINGS.md) (source overlay: [`gitlab-profile/docs/PROJECT_SETTINGS.md`](../gitlab-profile/docs/PROJECT_SETTINGS.md)).
 
